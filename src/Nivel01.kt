@@ -7,7 +7,7 @@ fun main(){
     val totalDePaginas = lerInt("INSIRA O NÚMERO TOTAL DE PÁGINAS:",scanner)
     var paginasLidas = lerInt("INSIRA O NÚMERO DE PAGINAS LIDAS:",scanner)
 
-    if (paginasLidas > totalDePaginas){
+    while (paginasLidas > totalDePaginas){
         println("O número de paginas lidas não pode exceder o número total de páginas do livro!!")
         paginasLidas = lerInt("INSIRA O NÚMERO DE PÁGINAS LIDAS:",scanner)
     }

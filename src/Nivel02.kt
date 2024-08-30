@@ -7,7 +7,7 @@ fun main() {
     val autores: MutableList<String> = mutableListOf()
     val totaldepaginas: MutableList<Int> = mutableListOf()
     val paginaslidas: MutableList<Int> = mutableListOf()
-    val tamanho = 20 // Ajusta a largura das colunas
+    val tamanho = 20 // Ajusta a largura das colunas(se o nome do livro for muito grande,as colunas ficam desalinhadas)
     val scanner = Scanner(System.`in`)
     menuPrincipal(livros, generos, autores, totaldepaginas, paginaslidas,tamanho, scanner)
     scanner.close()
@@ -51,7 +51,7 @@ fun cadastrarlivros(
     val aut = lerString("Insira o autor do livro: ")
     val totalpag = lerInt("Insira o total de páginas do livro: ")
     var paglidas = lerInt("Insira o número de páginas lidas do livro: ")
-    if (paglidas > totalpag){
+    while(paglidas > totalpag){
         println("O número de páginas lidas excede o total de páginas! por favor, insira um número válido")
         paglidas = lerInt("Insira o número de páginas lidas do livro: ")
     }
